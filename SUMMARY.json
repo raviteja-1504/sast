@@ -1,0 +1,18 @@
+{
+  "total_cases": 100,
+  "languages": 10,
+  "by_language": {
+    "JavaScript": 10,
+    "TypeScript": 10,
+    "Python": 10,
+    "Java": 10,
+    "Go": 10,
+    "C#": 10,
+    "PHP": 10,
+    "Ruby": 10,
+    "Kotlin": 10,
+    "Rust": 10
+  },
+  "positive": 71,
+  "negative": 29
+}

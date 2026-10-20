@@ -1,0 +1,101 @@
+id,language,path,category,difficulty,expected,name,notes
+JAVASCRIPT-001,JavaScript,cases/javascript/SQL concatenation.js,sqli,easy,positive,SQL concatenation,Synthetic source-code fixture; adapt framework models as needed.
+JAVASCRIPT-002,JavaScript,cases/javascript/Parameterized SQL.js,sqli,hard,negative,Parameterized SQL,Synthetic source-code fixture; adapt framework models as needed.
+JAVASCRIPT-003,JavaScript,cases/javascript/Shell command concatenation.js,command_injection,easy,positive,Shell command concatenation,Synthetic source-code fixture; adapt framework models as needed.
+JAVASCRIPT-004,JavaScript,cases/javascript/Option-only taint.js,command_injection,hard,negative,Option-only taint,Synthetic source-code fixture; adapt framework models as needed.
+JAVASCRIPT-005,JavaScript,cases/javascript/User path reaches file read.js,path_traversal,easy,positive,User path reaches file read,Synthetic source-code fixture; adapt framework models as needed.
+JAVASCRIPT-006,JavaScript,cases/javascript/User URL reaches fetch.js,ssrf,easy,positive,User URL reaches fetch,Synthetic source-code fixture; adapt framework models as needed.
+JAVASCRIPT-007,JavaScript,cases/javascript/Header only.js,ssrf,hard,negative,Header only,Synthetic source-code fixture; adapt framework models as needed.
+JAVASCRIPT-008,JavaScript,cases/javascript/HTML response concatenation.js,xss,easy,positive,HTML response concatenation,Synthetic source-code fixture; adapt framework models as needed.
+JAVASCRIPT-009,JavaScript,cases/javascript/Text-only DOM sink.js,xss,hard,negative,Text-only DOM sink,Synthetic source-code fixture; adapt framework models as needed.
+JAVASCRIPT-010,JavaScript,cases/javascript/Unscoped object lookup.js,authz_bola,hard,positive,Unscoped object lookup,Synthetic benchmark fixture. Authorization/BOLA cases require contextual review.
+TYPESCRIPT-001,TypeScript,cases/typescript/SQL template literal.ts,sqli,easy,positive,SQL template literal,Synthetic source-code fixture; adapt framework models as needed.
+TYPESCRIPT-002,TypeScript,cases/typescript/Parameterized SQL.ts,sqli,hard,negative,Parameterized SQL,Synthetic source-code fixture; adapt framework models as needed.
+TYPESCRIPT-003,TypeScript,cases/typescript/Shell command concatenation.ts,command_injection,easy,positive,Shell command concatenation,Synthetic source-code fixture; adapt framework models as needed.
+TYPESCRIPT-004,TypeScript,cases/typescript/Resolve is not validation.ts,path_traversal,hard,positive,Resolve is not validation,Synthetic source-code fixture; adapt framework models as needed.
+TYPESCRIPT-005,TypeScript,cases/typescript/User URL reaches fetch.ts,ssrf,easy,positive,User URL reaches fetch,Synthetic source-code fixture; adapt framework models as needed.
+TYPESCRIPT-006,TypeScript,cases/typescript/Header only.ts,ssrf,hard,negative,Header only,Synthetic source-code fixture; adapt framework models as needed.
+TYPESCRIPT-007,TypeScript,cases/typescript/DOM HTML sink.ts,xss,easy,positive,DOM HTML sink,Synthetic source-code fixture; adapt framework models as needed.
+TYPESCRIPT-008,TypeScript,cases/typescript/Safe text sink.ts,xss,hard,negative,Safe text sink,Synthetic source-code fixture; adapt framework models as needed.
+TYPESCRIPT-009,TypeScript,cases/typescript/Cross-function flow.ts,sqli,hard,positive,Cross-function flow,Synthetic source-code fixture; adapt framework models as needed.
+TYPESCRIPT-010,TypeScript,cases/typescript/Synthetic hardcoded secret.ts,secrets,easy,positive,Synthetic hardcoded secret,Synthetic source-code fixture; adapt framework models as needed.
+PYTHON-001,Python,cases/python/SQL concatenation.py,sqli,easy,positive,SQL concatenation,Synthetic source-code fixture; adapt framework models as needed.
+PYTHON-002,Python,cases/python/Parameterized SQL.py,sqli,hard,negative,Parameterized SQL,Synthetic source-code fixture; adapt framework models as needed.
+PYTHON-003,Python,cases/python/Shell command concatenation.py,command_injection,easy,positive,Shell command concatenation,Synthetic source-code fixture; adapt framework models as needed.
+PYTHON-004,Python,cases/python/Timeout only.py,command_injection,hard,negative,Timeout only,Synthetic source-code fixture; adapt framework models as needed.
+PYTHON-005,Python,cases/python/User path reaches open.py,path_traversal,easy,positive,User path reaches open,Synthetic source-code fixture; adapt framework models as needed.
+PYTHON-006,Python,cases/python/Filename allowlist.py,path_traversal,hard,negative,Filename allowlist,Synthetic source-code fixture; adapt framework models as needed.
+PYTHON-007,Python,cases/python/User URL reaches requests.py,ssrf,easy,positive,User URL reaches requests,Synthetic source-code fixture; adapt framework models as needed.
+PYTHON-008,Python,cases/python/User input becomes template.py,ssti,easy,positive,User input becomes template,Synthetic source-code fixture; adapt framework models as needed.
+PYTHON-009,Python,cases/python/Unsafe pickle load.py,deserialization,easy,positive,Unsafe pickle load,Synthetic source-code fixture; adapt framework models as needed.
+PYTHON-010,Python,cases/python/Escaped HTML context.py,xss,hard,negative,Escaped HTML context,Synthetic source-code fixture; adapt framework models as needed.
+JAVA-001,Java,cases/java/SQL concatenation.java,sqli,easy,positive,SQL concatenation,Synthetic source-code fixture; adapt framework models as needed.
+JAVA-002,Java,cases/java/Prepared statement.java,sqli,hard,negative,Prepared statement,Synthetic source-code fixture; adapt framework models as needed.
+JAVA-003,Java,cases/java/Shell command concatenation.java,command_injection,easy,positive,Shell command concatenation,Synthetic source-code fixture; adapt framework models as needed.
+JAVA-004,Java,cases/java/User path reaches file API.java,path_traversal,easy,positive,User path reaches file API,Synthetic source-code fixture; adapt framework models as needed.
+JAVA-005,Java,cases/java/User URL opens connection.java,ssrf,easy,positive,User URL opens connection,Synthetic source-code fixture; adapt framework models as needed.
+JAVA-006,Java,cases/java/Raw HTML response.java,xss,easy,positive,Raw HTML response,Synthetic source-code fixture; adapt framework models as needed.
+JAVA-007,Java,cases/java/Native deserialization.java,deserialization,hard,positive,Native deserialization,Synthetic source-code fixture; adapt framework models as needed.
+JAVA-008,Java,cases/java/Log-only flow.java,sqli,hard,negative,Log-only flow,Synthetic source-code fixture; adapt framework models as needed.
+JAVA-009,Java,cases/java/Synthetic hardcoded secret.java,secrets,easy,positive,Synthetic hardcoded secret,Synthetic source-code fixture; adapt framework models as needed.
+JAVA-010,Java,cases/java/Fixed destination.java,ssrf,hard,negative,Fixed destination,Synthetic source-code fixture; adapt framework models as needed.
+GO-001,Go,cases/go/SQL concatenation.go,sqli,easy,positive,SQL concatenation,Synthetic source-code fixture; adapt framework models as needed.
+GO-002,Go,cases/go/Parameterized SQL.go,sqli,hard,negative,Parameterized SQL,Synthetic source-code fixture; adapt framework models as needed.
+GO-003,Go,cases/go/Shell command concatenation.go,command_injection,easy,positive,Shell command concatenation,Synthetic source-code fixture; adapt framework models as needed.
+GO-004,Go,cases/go/User path reaches file read.go,path_traversal,easy,positive,User path reaches file read,Synthetic source-code fixture; adapt framework models as needed.
+GO-005,Go,cases/go/User URL reaches HTTP client.go,ssrf,easy,positive,User URL reaches HTTP client,Synthetic source-code fixture; adapt framework models as needed.
+GO-006,Go,cases/go/HTML string response.go,xss,easy,positive,HTML string response,Synthetic source-code fixture; adapt framework models as needed.
+GO-007,Go,cases/go/Fixed command args.go,command_injection,hard,negative,Fixed command args,Synthetic source-code fixture; adapt framework models as needed.
+GO-008,Go,cases/go/Basename mitigation.go,path_traversal,hard,negative,Basename mitigation,Synthetic source-code fixture; adapt framework models as needed.
+GO-009,Go,cases/go/Unscoped object lookup.go,authz_bola,hard,positive,Unscoped object lookup,Synthetic benchmark fixture. Authorization/BOLA cases require contextual review.
+GO-010,Go,cases/go/Synthetic hardcoded secret.go,secrets,easy,positive,Synthetic hardcoded secret,Synthetic source-code fixture; adapt framework models as needed.
+CSHARP-001,C#,cases/csharp/SQL concatenation.cs,sqli,easy,positive,SQL concatenation,Synthetic source-code fixture; adapt framework models as needed.
+CSHARP-002,C#,cases/csharp/Parameterized SQL.cs,sqli,hard,negative,Parameterized SQL,Synthetic source-code fixture; adapt framework models as needed.
+CSHARP-003,C#,cases/csharp/Process command concatenation.cs,command_injection,easy,positive,Process command concatenation,Synthetic source-code fixture; adapt framework models as needed.
+CSHARP-004,C#,cases/csharp/User path reaches file read.cs,path_traversal,easy,positive,User path reaches file read,Synthetic source-code fixture; adapt framework models as needed.
+CSHARP-005,C#,cases/csharp/User URL reaches HTTP client.cs,ssrf,easy,positive,User URL reaches HTTP client,Synthetic source-code fixture; adapt framework models as needed.
+CSHARP-006,C#,cases/csharp/Raw HTML response.cs,xss,easy,positive,Raw HTML response,Synthetic source-code fixture; adapt framework models as needed.
+CSHARP-007,C#,cases/csharp/Legacy unsafe deserializer.cs,deserialization,hard,positive,Legacy unsafe deserializer,Synthetic source-code fixture; adapt framework models as needed.
+CSHARP-008,C#,cases/csharp/Log-only flow.cs,sqli,hard,negative,Log-only flow,Synthetic source-code fixture; adapt framework models as needed.
+CSHARP-009,C#,cases/csharp/Unscoped record lookup.cs,authz_bola,hard,positive,Unscoped record lookup,Synthetic benchmark fixture. Authorization/BOLA cases require contextual review.
+CSHARP-010,C#,cases/csharp/Synthetic hardcoded secret.cs,secrets,easy,positive,Synthetic hardcoded secret,Synthetic source-code fixture; adapt framework models as needed.
+PHP-001,PHP,cases/php/SQL concatenation.php,sqli,easy,positive,SQL concatenation,Synthetic source-code fixture; adapt framework models as needed.
+PHP-002,PHP,cases/php/Prepared statement.php,sqli,hard,negative,Prepared statement,Synthetic source-code fixture; adapt framework models as needed.
+PHP-003,PHP,cases/php/Shell command concatenation.php,command_injection,easy,positive,Shell command concatenation,Synthetic source-code fixture; adapt framework models as needed.
+PHP-004,PHP,cases/php/User path reaches readfile.php,path_traversal,easy,positive,User path reaches readfile,Synthetic source-code fixture; adapt framework models as needed.
+PHP-005,PHP,cases/php/User URL reaches cURL.php,ssrf,easy,positive,User URL reaches cURL,Synthetic source-code fixture; adapt framework models as needed.
+PHP-006,PHP,cases/php/Unescaped HTML.php,xss,easy,positive,Unescaped HTML,Synthetic source-code fixture; adapt framework models as needed.
+PHP-007,PHP,cases/php/Untrusted unserialize.php,deserialization,hard,positive,Untrusted unserialize,Synthetic source-code fixture; adapt framework models as needed.
+PHP-008,PHP,cases/php/HTML escaping only.php,sqli,hard,negative,HTML escaping only,Synthetic source-code fixture; adapt framework models as needed.
+PHP-009,PHP,cases/php/Unscoped record lookup.php,authz_bola,hard,positive,Unscoped record lookup,Synthetic benchmark fixture. Authorization/BOLA cases require contextual review.
+PHP-010,PHP,cases/php/Synthetic hardcoded secret.php,secrets,easy,positive,Synthetic hardcoded secret,Synthetic source-code fixture; adapt framework models as needed.
+RUBY-001,Ruby,cases/ruby/SQL interpolation.rb,sqli,easy,positive,SQL interpolation,Synthetic source-code fixture; adapt framework models as needed.
+RUBY-002,Ruby,cases/ruby/Bound parameter.rb,sqli,hard,negative,Bound parameter,Synthetic source-code fixture; adapt framework models as needed.
+RUBY-003,Ruby,cases/ruby/Shell interpolation.rb,command_injection,easy,positive,Shell interpolation,Synthetic source-code fixture; adapt framework models as needed.
+RUBY-004,Ruby,cases/ruby/User path reaches file read.rb,path_traversal,easy,positive,User path reaches file read,Synthetic source-code fixture; adapt framework models as needed.
+RUBY-005,Ruby,cases/ruby/User URL reaches URI.open.rb,ssrf,easy,positive,User URL reaches URI.open,Synthetic source-code fixture; adapt framework models as needed.
+RUBY-006,Ruby,cases/ruby/Input becomes ERB template.rb,ssti,hard,positive,Input becomes ERB template,Synthetic source-code fixture; adapt framework models as needed.
+RUBY-007,Ruby,cases/ruby/Raw HTML response.rb,xss,easy,positive,Raw HTML response,Synthetic source-code fixture; adapt framework models as needed.
+RUBY-008,Ruby,cases/ruby/Log-only flow.rb,sqli,hard,negative,Log-only flow,Synthetic source-code fixture; adapt framework models as needed.
+RUBY-009,Ruby,cases/ruby/Unscoped invoice lookup.rb,authz_bola,hard,positive,Unscoped invoice lookup,Synthetic benchmark fixture. Authorization/BOLA cases require contextual review.
+RUBY-010,Ruby,cases/ruby/Synthetic hardcoded secret.rb,secrets,easy,positive,Synthetic hardcoded secret,Synthetic source-code fixture; adapt framework models as needed.
+KOTLIN-001,Kotlin,cases/kotlin/SQL concatenation.kt,sqli,easy,positive,SQL concatenation,Synthetic source-code fixture; adapt framework models as needed.
+KOTLIN-002,Kotlin,cases/kotlin/Prepared statement.kt,sqli,hard,negative,Prepared statement,Synthetic source-code fixture; adapt framework models as needed.
+KOTLIN-003,Kotlin,cases/kotlin/Shell command interpolation.kt,command_injection,easy,positive,Shell command interpolation,Synthetic source-code fixture; adapt framework models as needed.
+KOTLIN-004,Kotlin,cases/kotlin/User path reaches file read.kt,path_traversal,easy,positive,User path reaches file read,Synthetic source-code fixture; adapt framework models as needed.
+KOTLIN-005,Kotlin,cases/kotlin/User URL reaches connection.kt,ssrf,easy,positive,User URL reaches connection,Synthetic source-code fixture; adapt framework models as needed.
+KOTLIN-006,Kotlin,cases/kotlin/HTML response.kt,xss,easy,positive,HTML response,Synthetic source-code fixture; adapt framework models as needed.
+KOTLIN-007,Kotlin,cases/kotlin/Log-only flow.kt,sqli,hard,negative,Log-only flow,Synthetic source-code fixture; adapt framework models as needed.
+KOTLIN-008,Kotlin,cases/kotlin/Filename allowlist.kt,path_traversal,hard,negative,Filename allowlist,Synthetic source-code fixture; adapt framework models as needed.
+KOTLIN-009,Kotlin,cases/kotlin/Unscoped object lookup.kt,authz_bola,hard,positive,Unscoped object lookup,Synthetic benchmark fixture. Authorization/BOLA cases require contextual review.
+KOTLIN-010,Kotlin,cases/kotlin/Synthetic hardcoded secret.kt,secrets,easy,positive,Synthetic hardcoded secret,Synthetic source-code fixture; adapt framework models as needed.
+RUST-001,Rust,cases/rust/SQL interpolation.rs,sqli,easy,positive,SQL interpolation,Synthetic source-code fixture; adapt framework models as needed.
+RUST-002,Rust,cases/rust/Bound SQL parameter.rs,sqli,hard,negative,Bound SQL parameter,Synthetic source-code fixture; adapt framework models as needed.
+RUST-003,Rust,cases/rust/Shell command interpolation.rs,command_injection,easy,positive,Shell command interpolation,Synthetic source-code fixture; adapt framework models as needed.
+RUST-004,Rust,cases/rust/User path reaches file read.rs,path_traversal,easy,positive,User path reaches file read,Synthetic source-code fixture; adapt framework models as needed.
+RUST-005,Rust,cases/rust/User URL reaches HTTP client.rs,ssrf,easy,positive,User URL reaches HTTP client,Synthetic source-code fixture; adapt framework models as needed.
+RUST-006,Rust,cases/rust/HTML loaded into WebView.rs,xss,hard,positive,HTML loaded into WebView,Synthetic source-code fixture; adapt framework models as needed.
+RUST-007,Rust,cases/rust/Fixed process arguments.rs,command_injection,hard,negative,Fixed process arguments,Synthetic source-code fixture; adapt framework models as needed.
+RUST-008,Rust,cases/rust/Log-only flow.rs,sqli,hard,negative,Log-only flow,Synthetic source-code fixture; adapt framework models as needed.
+RUST-009,Rust,cases/rust/Unscoped record lookup.rs,authz_bola,hard,positive,Unscoped record lookup,Synthetic benchmark fixture. Authorization/BOLA cases require contextual review.
+RUST-010,Rust,cases/rust/Synthetic hardcoded secret.rs,secrets,easy,positive,Synthetic hardcoded secret,Synthetic source-code fixture; adapt framework models as needed.

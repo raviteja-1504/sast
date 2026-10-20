@@ -1,0 +1,1031 @@
+{
+  "name": "TrustLedger SAST Benchmark",
+  "version": "0.1.0",
+  "languages": [
+    "JavaScript",
+    "TypeScript",
+    "Python",
+    "Java",
+    "Go",
+    "C#",
+    "PHP",
+    "Ruby",
+    "Kotlin",
+    "Rust"
+  ],
+  "case_count": 100,
+  "categories": [
+    "authz_bola",
+    "command_injection",
+    "deserialization",
+    "path_traversal",
+    "secrets",
+    "sqli",
+    "ssrf",
+    "ssti",
+    "xss"
+  ],
+  "caveat": "Starter corpus, not exhaustive. Positive labels indicate intended patterns; BOLA cases require contextual review. Use alongside OWASP Benchmark and Juliet/SARD.",
+  "cases": [
+    {
+      "id": "JAVASCRIPT-001",
+      "language": "JavaScript",
+      "path": "cases/javascript/SQL concatenation.js",
+      "category": "sqli",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "SQL concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVASCRIPT-002",
+      "language": "JavaScript",
+      "path": "cases/javascript/Parameterized SQL.js",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Parameterized SQL",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVASCRIPT-003",
+      "language": "JavaScript",
+      "path": "cases/javascript/Shell command concatenation.js",
+      "category": "command_injection",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Shell command concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVASCRIPT-004",
+      "language": "JavaScript",
+      "path": "cases/javascript/Option-only taint.js",
+      "category": "command_injection",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Option-only taint",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVASCRIPT-005",
+      "language": "JavaScript",
+      "path": "cases/javascript/User path reaches file read.js",
+      "category": "path_traversal",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User path reaches file read",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVASCRIPT-006",
+      "language": "JavaScript",
+      "path": "cases/javascript/User URL reaches fetch.js",
+      "category": "ssrf",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User URL reaches fetch",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVASCRIPT-007",
+      "language": "JavaScript",
+      "path": "cases/javascript/Header only.js",
+      "category": "ssrf",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Header only",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVASCRIPT-008",
+      "language": "JavaScript",
+      "path": "cases/javascript/HTML response concatenation.js",
+      "category": "xss",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "HTML response concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVASCRIPT-009",
+      "language": "JavaScript",
+      "path": "cases/javascript/Text-only DOM sink.js",
+      "category": "xss",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Text-only DOM sink",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVASCRIPT-010",
+      "language": "JavaScript",
+      "path": "cases/javascript/Unscoped object lookup.js",
+      "category": "authz_bola",
+      "difficulty": "hard",
+      "expected": "positive",
+      "name": "Unscoped object lookup",
+      "notes": "Synthetic benchmark fixture. Authorization/BOLA cases require contextual review."
+    },
+    {
+      "id": "TYPESCRIPT-001",
+      "language": "TypeScript",
+      "path": "cases/typescript/SQL template literal.ts",
+      "category": "sqli",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "SQL template literal",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "TYPESCRIPT-002",
+      "language": "TypeScript",
+      "path": "cases/typescript/Parameterized SQL.ts",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Parameterized SQL",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "TYPESCRIPT-003",
+      "language": "TypeScript",
+      "path": "cases/typescript/Shell command concatenation.ts",
+      "category": "command_injection",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Shell command concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "TYPESCRIPT-004",
+      "language": "TypeScript",
+      "path": "cases/typescript/Resolve is not validation.ts",
+      "category": "path_traversal",
+      "difficulty": "hard",
+      "expected": "positive",
+      "name": "Resolve is not validation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "TYPESCRIPT-005",
+      "language": "TypeScript",
+      "path": "cases/typescript/User URL reaches fetch.ts",
+      "category": "ssrf",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User URL reaches fetch",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "TYPESCRIPT-006",
+      "language": "TypeScript",
+      "path": "cases/typescript/Header only.ts",
+      "category": "ssrf",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Header only",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "TYPESCRIPT-007",
+      "language": "TypeScript",
+      "path": "cases/typescript/DOM HTML sink.ts",
+      "category": "xss",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "DOM HTML sink",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "TYPESCRIPT-008",
+      "language": "TypeScript",
+      "path": "cases/typescript/Safe text sink.ts",
+      "category": "xss",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Safe text sink",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "TYPESCRIPT-009",
+      "language": "TypeScript",
+      "path": "cases/typescript/Cross-function flow.ts",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "positive",
+      "name": "Cross-function flow",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "TYPESCRIPT-010",
+      "language": "TypeScript",
+      "path": "cases/typescript/Synthetic hardcoded secret.ts",
+      "category": "secrets",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Synthetic hardcoded secret",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PYTHON-001",
+      "language": "Python",
+      "path": "cases/python/SQL concatenation.py",
+      "category": "sqli",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "SQL concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PYTHON-002",
+      "language": "Python",
+      "path": "cases/python/Parameterized SQL.py",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Parameterized SQL",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PYTHON-003",
+      "language": "Python",
+      "path": "cases/python/Shell command concatenation.py",
+      "category": "command_injection",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Shell command concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PYTHON-004",
+      "language": "Python",
+      "path": "cases/python/Timeout only.py",
+      "category": "command_injection",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Timeout only",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PYTHON-005",
+      "language": "Python",
+      "path": "cases/python/User path reaches open.py",
+      "category": "path_traversal",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User path reaches open",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PYTHON-006",
+      "language": "Python",
+      "path": "cases/python/Filename allowlist.py",
+      "category": "path_traversal",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Filename allowlist",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PYTHON-007",
+      "language": "Python",
+      "path": "cases/python/User URL reaches requests.py",
+      "category": "ssrf",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User URL reaches requests",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PYTHON-008",
+      "language": "Python",
+      "path": "cases/python/User input becomes template.py",
+      "category": "ssti",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User input becomes template",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PYTHON-009",
+      "language": "Python",
+      "path": "cases/python/Unsafe pickle load.py",
+      "category": "deserialization",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Unsafe pickle load",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PYTHON-010",
+      "language": "Python",
+      "path": "cases/python/Escaped HTML context.py",
+      "category": "xss",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Escaped HTML context",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVA-001",
+      "language": "Java",
+      "path": "cases/java/SQL concatenation.java",
+      "category": "sqli",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "SQL concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVA-002",
+      "language": "Java",
+      "path": "cases/java/Prepared statement.java",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Prepared statement",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVA-003",
+      "language": "Java",
+      "path": "cases/java/Shell command concatenation.java",
+      "category": "command_injection",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Shell command concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVA-004",
+      "language": "Java",
+      "path": "cases/java/User path reaches file API.java",
+      "category": "path_traversal",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User path reaches file API",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVA-005",
+      "language": "Java",
+      "path": "cases/java/User URL opens connection.java",
+      "category": "ssrf",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User URL opens connection",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVA-006",
+      "language": "Java",
+      "path": "cases/java/Raw HTML response.java",
+      "category": "xss",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Raw HTML response",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVA-007",
+      "language": "Java",
+      "path": "cases/java/Native deserialization.java",
+      "category": "deserialization",
+      "difficulty": "hard",
+      "expected": "positive",
+      "name": "Native deserialization",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVA-008",
+      "language": "Java",
+      "path": "cases/java/Log-only flow.java",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Log-only flow",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVA-009",
+      "language": "Java",
+      "path": "cases/java/Synthetic hardcoded secret.java",
+      "category": "secrets",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Synthetic hardcoded secret",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "JAVA-010",
+      "language": "Java",
+      "path": "cases/java/Fixed destination.java",
+      "category": "ssrf",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Fixed destination",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "GO-001",
+      "language": "Go",
+      "path": "cases/go/SQL concatenation.go",
+      "category": "sqli",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "SQL concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "GO-002",
+      "language": "Go",
+      "path": "cases/go/Parameterized SQL.go",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Parameterized SQL",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "GO-003",
+      "language": "Go",
+      "path": "cases/go/Shell command concatenation.go",
+      "category": "command_injection",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Shell command concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "GO-004",
+      "language": "Go",
+      "path": "cases/go/User path reaches file read.go",
+      "category": "path_traversal",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User path reaches file read",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "GO-005",
+      "language": "Go",
+      "path": "cases/go/User URL reaches HTTP client.go",
+      "category": "ssrf",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User URL reaches HTTP client",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "GO-006",
+      "language": "Go",
+      "path": "cases/go/HTML string response.go",
+      "category": "xss",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "HTML string response",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "GO-007",
+      "language": "Go",
+      "path": "cases/go/Fixed command args.go",
+      "category": "command_injection",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Fixed command args",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "GO-008",
+      "language": "Go",
+      "path": "cases/go/Basename mitigation.go",
+      "category": "path_traversal",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Basename mitigation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "GO-009",
+      "language": "Go",
+      "path": "cases/go/Unscoped object lookup.go",
+      "category": "authz_bola",
+      "difficulty": "hard",
+      "expected": "positive",
+      "name": "Unscoped object lookup",
+      "notes": "Synthetic benchmark fixture. Authorization/BOLA cases require contextual review."
+    },
+    {
+      "id": "GO-010",
+      "language": "Go",
+      "path": "cases/go/Synthetic hardcoded secret.go",
+      "category": "secrets",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Synthetic hardcoded secret",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "CSHARP-001",
+      "language": "C#",
+      "path": "cases/csharp/SQL concatenation.cs",
+      "category": "sqli",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "SQL concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "CSHARP-002",
+      "language": "C#",
+      "path": "cases/csharp/Parameterized SQL.cs",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Parameterized SQL",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "CSHARP-003",
+      "language": "C#",
+      "path": "cases/csharp/Process command concatenation.cs",
+      "category": "command_injection",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Process command concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "CSHARP-004",
+      "language": "C#",
+      "path": "cases/csharp/User path reaches file read.cs",
+      "category": "path_traversal",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User path reaches file read",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "CSHARP-005",
+      "language": "C#",
+      "path": "cases/csharp/User URL reaches HTTP client.cs",
+      "category": "ssrf",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User URL reaches HTTP client",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "CSHARP-006",
+      "language": "C#",
+      "path": "cases/csharp/Raw HTML response.cs",
+      "category": "xss",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Raw HTML response",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "CSHARP-007",
+      "language": "C#",
+      "path": "cases/csharp/Legacy unsafe deserializer.cs",
+      "category": "deserialization",
+      "difficulty": "hard",
+      "expected": "positive",
+      "name": "Legacy unsafe deserializer",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "CSHARP-008",
+      "language": "C#",
+      "path": "cases/csharp/Log-only flow.cs",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Log-only flow",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "CSHARP-009",
+      "language": "C#",
+      "path": "cases/csharp/Unscoped record lookup.cs",
+      "category": "authz_bola",
+      "difficulty": "hard",
+      "expected": "positive",
+      "name": "Unscoped record lookup",
+      "notes": "Synthetic benchmark fixture. Authorization/BOLA cases require contextual review."
+    },
+    {
+      "id": "CSHARP-010",
+      "language": "C#",
+      "path": "cases/csharp/Synthetic hardcoded secret.cs",
+      "category": "secrets",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Synthetic hardcoded secret",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PHP-001",
+      "language": "PHP",
+      "path": "cases/php/SQL concatenation.php",
+      "category": "sqli",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "SQL concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PHP-002",
+      "language": "PHP",
+      "path": "cases/php/Prepared statement.php",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Prepared statement",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PHP-003",
+      "language": "PHP",
+      "path": "cases/php/Shell command concatenation.php",
+      "category": "command_injection",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Shell command concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PHP-004",
+      "language": "PHP",
+      "path": "cases/php/User path reaches readfile.php",
+      "category": "path_traversal",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User path reaches readfile",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PHP-005",
+      "language": "PHP",
+      "path": "cases/php/User URL reaches cURL.php",
+      "category": "ssrf",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User URL reaches cURL",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PHP-006",
+      "language": "PHP",
+      "path": "cases/php/Unescaped HTML.php",
+      "category": "xss",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Unescaped HTML",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PHP-007",
+      "language": "PHP",
+      "path": "cases/php/Untrusted unserialize.php",
+      "category": "deserialization",
+      "difficulty": "hard",
+      "expected": "positive",
+      "name": "Untrusted unserialize",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PHP-008",
+      "language": "PHP",
+      "path": "cases/php/HTML escaping only.php",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "HTML escaping only",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "PHP-009",
+      "language": "PHP",
+      "path": "cases/php/Unscoped record lookup.php",
+      "category": "authz_bola",
+      "difficulty": "hard",
+      "expected": "positive",
+      "name": "Unscoped record lookup",
+      "notes": "Synthetic benchmark fixture. Authorization/BOLA cases require contextual review."
+    },
+    {
+      "id": "PHP-010",
+      "language": "PHP",
+      "path": "cases/php/Synthetic hardcoded secret.php",
+      "category": "secrets",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Synthetic hardcoded secret",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUBY-001",
+      "language": "Ruby",
+      "path": "cases/ruby/SQL interpolation.rb",
+      "category": "sqli",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "SQL interpolation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUBY-002",
+      "language": "Ruby",
+      "path": "cases/ruby/Bound parameter.rb",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Bound parameter",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUBY-003",
+      "language": "Ruby",
+      "path": "cases/ruby/Shell interpolation.rb",
+      "category": "command_injection",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Shell interpolation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUBY-004",
+      "language": "Ruby",
+      "path": "cases/ruby/User path reaches file read.rb",
+      "category": "path_traversal",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User path reaches file read",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUBY-005",
+      "language": "Ruby",
+      "path": "cases/ruby/User URL reaches URI.open.rb",
+      "category": "ssrf",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User URL reaches URI.open",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUBY-006",
+      "language": "Ruby",
+      "path": "cases/ruby/Input becomes ERB template.rb",
+      "category": "ssti",
+      "difficulty": "hard",
+      "expected": "positive",
+      "name": "Input becomes ERB template",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUBY-007",
+      "language": "Ruby",
+      "path": "cases/ruby/Raw HTML response.rb",
+      "category": "xss",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Raw HTML response",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUBY-008",
+      "language": "Ruby",
+      "path": "cases/ruby/Log-only flow.rb",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Log-only flow",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUBY-009",
+      "language": "Ruby",
+      "path": "cases/ruby/Unscoped invoice lookup.rb",
+      "category": "authz_bola",
+      "difficulty": "hard",
+      "expected": "positive",
+      "name": "Unscoped invoice lookup",
+      "notes": "Synthetic benchmark fixture. Authorization/BOLA cases require contextual review."
+    },
+    {
+      "id": "RUBY-010",
+      "language": "Ruby",
+      "path": "cases/ruby/Synthetic hardcoded secret.rb",
+      "category": "secrets",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Synthetic hardcoded secret",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "KOTLIN-001",
+      "language": "Kotlin",
+      "path": "cases/kotlin/SQL concatenation.kt",
+      "category": "sqli",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "SQL concatenation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "KOTLIN-002",
+      "language": "Kotlin",
+      "path": "cases/kotlin/Prepared statement.kt",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Prepared statement",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "KOTLIN-003",
+      "language": "Kotlin",
+      "path": "cases/kotlin/Shell command interpolation.kt",
+      "category": "command_injection",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Shell command interpolation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "KOTLIN-004",
+      "language": "Kotlin",
+      "path": "cases/kotlin/User path reaches file read.kt",
+      "category": "path_traversal",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User path reaches file read",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "KOTLIN-005",
+      "language": "Kotlin",
+      "path": "cases/kotlin/User URL reaches connection.kt",
+      "category": "ssrf",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User URL reaches connection",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "KOTLIN-006",
+      "language": "Kotlin",
+      "path": "cases/kotlin/HTML response.kt",
+      "category": "xss",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "HTML response",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "KOTLIN-007",
+      "language": "Kotlin",
+      "path": "cases/kotlin/Log-only flow.kt",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Log-only flow",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "KOTLIN-008",
+      "language": "Kotlin",
+      "path": "cases/kotlin/Filename allowlist.kt",
+      "category": "path_traversal",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Filename allowlist",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "KOTLIN-009",
+      "language": "Kotlin",
+      "path": "cases/kotlin/Unscoped object lookup.kt",
+      "category": "authz_bola",
+      "difficulty": "hard",
+      "expected": "positive",
+      "name": "Unscoped object lookup",
+      "notes": "Synthetic benchmark fixture. Authorization/BOLA cases require contextual review."
+    },
+    {
+      "id": "KOTLIN-010",
+      "language": "Kotlin",
+      "path": "cases/kotlin/Synthetic hardcoded secret.kt",
+      "category": "secrets",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Synthetic hardcoded secret",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUST-001",
+      "language": "Rust",
+      "path": "cases/rust/SQL interpolation.rs",
+      "category": "sqli",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "SQL interpolation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUST-002",
+      "language": "Rust",
+      "path": "cases/rust/Bound SQL parameter.rs",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Bound SQL parameter",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUST-003",
+      "language": "Rust",
+      "path": "cases/rust/Shell command interpolation.rs",
+      "category": "command_injection",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Shell command interpolation",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUST-004",
+      "language": "Rust",
+      "path": "cases/rust/User path reaches file read.rs",
+      "category": "path_traversal",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User path reaches file read",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUST-005",
+      "language": "Rust",
+      "path": "cases/rust/User URL reaches HTTP client.rs",
+      "category": "ssrf",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "User URL reaches HTTP client",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUST-006",
+      "language": "Rust",
+      "path": "cases/rust/HTML loaded into WebView.rs",
+      "category": "xss",
+      "difficulty": "hard",
+      "expected": "positive",
+      "name": "HTML loaded into WebView",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUST-007",
+      "language": "Rust",
+      "path": "cases/rust/Fixed process arguments.rs",
+      "category": "command_injection",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Fixed process arguments",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUST-008",
+      "language": "Rust",
+      "path": "cases/rust/Log-only flow.rs",
+      "category": "sqli",
+      "difficulty": "hard",
+      "expected": "negative",
+      "name": "Log-only flow",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    },
+    {
+      "id": "RUST-009",
+      "language": "Rust",
+      "path": "cases/rust/Unscoped record lookup.rs",
+      "category": "authz_bola",
+      "difficulty": "hard",
+      "expected": "positive",
+      "name": "Unscoped record lookup",
+      "notes": "Synthetic benchmark fixture. Authorization/BOLA cases require contextual review."
+    },
+    {
+      "id": "RUST-010",
+      "language": "Rust",
+      "path": "cases/rust/Synthetic hardcoded secret.rs",
+      "category": "secrets",
+      "difficulty": "easy",
+      "expected": "positive",
+      "name": "Synthetic hardcoded secret",
+      "notes": "Synthetic source-code fixture; adapt framework models as needed."
+    }
+  ]
+}
